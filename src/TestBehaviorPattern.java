@@ -16,6 +16,7 @@ public class TestBehaviorPattern {
         order.addItem("Item 5", 10);
         order.addItem("Item 6", 20);
 
+
         System.out.println(order);
     }
 }

@@ -3,7 +3,7 @@ public class PriceObserver implements OrderObserver {
     public void update(Order order) {
         if (order.getTotalPrice() > 200) {
             double discount = 20;
-            order.setShippingCost(order.getTotalPrice() - discount);
+            order.setPrice(order.getTotalPrice() - discount);
         }
     }
 }

@@ -39,6 +39,10 @@ public class Order {
         this.shippingCost = shippingCost;
     }
 
+    public void setPrice(double price) {
+        this.totalPrice = price;
+    }
+
     private void notifyObservers() {
         for (OrderObserver observer : observers) {
             observer.update(this);
@@ -48,7 +52,7 @@ public class Order {
     @Override
     public String toString() {
         return "Order : " +
-                "\nYou have " + itemCount + "item(s)."+
+                "\nYou have " + itemCount + " item(s)."+
                 "\nThe shipping cost is : "+ shippingCost + "$."+
                 "\nThe total price is : " + totalPrice + "$." ;
     }
